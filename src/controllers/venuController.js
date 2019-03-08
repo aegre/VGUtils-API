@@ -2,7 +2,7 @@ const VenueModel = require('./../models/venueModel')
 
 module.exports = {
 
-  // GET API/TASK
+  // GET api/venues
   getAll: async (req, res) => {
     try {
       const venues = await VenueModel.find({})

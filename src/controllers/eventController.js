@@ -2,7 +2,7 @@ const EventModel = require('./../models/eventModel')
 
 module.exports = {
 
-  // GET API/TASK
+  // GET api/events
   getAll: async (req, res) => {
     try {
       const events = await EventModel.find({})
