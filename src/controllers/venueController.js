@@ -12,7 +12,7 @@ module.exports = {
     }
   },
 
-  // POST API/TASK
+  // POST api/venues
   post: async (req, res) => {
     // Limit of minutes, we convert it to seconds
     if (req.body.duration && req.body.duration > 7200) {
@@ -21,11 +21,11 @@ module.exports = {
     }
 
     try {
-      // Generate a task model with all the parameters
-      const task = new VenueModel({ ...req.body })
+      // Generate a venue model with all the parameters
+      const venue = new VenueModel({ ...req.body })
       // save model
-      const savedVenue = await task.save()
-      // return the saved task
+      const savedVenue = await venue.save()
+      // return the saved venue
       res.status(200).send(savedVenue)
     } catch (err) {
       res.status(500).send({ message: 'Error while trying to create venue' })
