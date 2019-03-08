@@ -9,6 +9,7 @@ const api = express.Router()
 
 // define routes
 api.get(constants.EVENT_ROUTE, eventController.getAll)
+api.post(constants.EVENT_ROUTE, eventController.post)
 /**
 api.get(`${constants.EVENT_ROUTE}${constants.URL_PARAM_ID}`, eventController.get);
 api.get(constants.EVENT_ROUTE, eventController.getAll);
