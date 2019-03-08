@@ -2,8 +2,9 @@ const mongoose = require('mongoose')
 const app = require('./app')
 const port = process.env.Port || 1234
 
+const connString = process.env.MONGO_CONN_STRING || 'mongodb://localhost:27017/vgUtils'
 // Mongo DB Connection
-mongoose.connect('mongodb://localhost:27017/vgUtils', {
+mongoose.connect(connString, {
   useNewUrlParser: true
 }, (error) => {
   if (error) {
