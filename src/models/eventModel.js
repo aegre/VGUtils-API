@@ -17,7 +17,7 @@ const eventSchema = new Schema({
   title: { type: String, required: true },
   isHightlight: { type: Boolean, default: false },
   hasBeenSaved: { type: Boolean, default: false },
-  venue: { type: Schema.Types.ObjectId, ref: 'Venue' },
+  venue: { type: Schema.Types.ObjectId, ref: 'Venue', required: true },
   tags: { type: [String], default: [] },
   postId: { type: String, default: '' }
 })
